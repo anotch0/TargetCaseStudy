@@ -43,7 +43,7 @@ function Routes() {
         throw response;
       })
       .then(data => {
-        console.log(data);
+        console.log('Routes data: ' + data);
         setRoutes(data.map((data) => {
           return {
             key: data.Description,
@@ -99,7 +99,7 @@ function Routes() {
         throw response;
       })
       .then(data => {
-        console.log(data);
+        console.log('Directions for ' + route + ': ' + data);
         setDirections(data.map((data) => {
           return {
             key: data.Value,
@@ -127,7 +127,7 @@ function Routes() {
         throw response;
       })
       .then(data => {
-        console.log(data);
+        console.log('Stops: ' + data);
         dispatch(setStops(data.map((data) => {
           return {
             key: data.Value,

@@ -12,7 +12,6 @@ export const stopsSlice = createSlice({
       });
     },
     emptyStops: state => { // empties stops list
-      console.log(state.length)
       while (state.length > 0) {
         state.pop();
       }

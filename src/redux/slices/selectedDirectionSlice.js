@@ -9,7 +9,7 @@ export const selectedDirectionSlice = createSlice({
   },
   reducers: {
     setSelectedDirection(state, action) {
-      console.log(action.payload);
+      console.log('Selected direction: ' + action.payload);
       state.value = action.payload.value;
       state.text = action.payload.text;
     }

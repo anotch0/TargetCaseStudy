@@ -11,6 +11,10 @@
 2. 'npm start' : This will start the web app on localhost
   * note : the build production will not work as proxy server will only work for development and api calls will not go through
 
+## Testing
+
+Very minimal testing with the react testing library was used. Majority of testing for API calls and redux functionality was done through console logging and browser DevTools
+
 ## Assumtions Made
 
 - Implementation of routing with at least 2 pages
