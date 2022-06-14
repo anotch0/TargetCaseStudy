@@ -24,6 +24,7 @@ Very minimal testing with the react testing library was used. Majority of testin
 - Global style variables to pass between the pages and API call locations
 - Multiple individual API call methods for the different data points
 - A components library for the front-end
+- Routes API is called at the start as Route data is needed for other API calls
 
 ## Created With React
 
