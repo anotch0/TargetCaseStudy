@@ -14,6 +14,8 @@
 ## Testing
 
 Very minimal testing with the react testing library was used. Majority of testing for API calls and redux functionality was done through console logging and browser DevTools
+- Minimal testing can be ran with 'npm run test'
+- Console logs can be found in console of browser developer tools
 
 ## Assumtions Made
 
