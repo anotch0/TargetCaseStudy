@@ -1,4 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+/*
+  Used for implementation of train times, not in current app
+*/
+
+/*import { createSlice } from "@reduxjs/toolkit";
 import { Table } from 'semantic-ui-react';
 
 export const tripsSlice = createSlice({
@@ -6,13 +10,6 @@ export const tripsSlice = createSlice({
   initialState: [],
   reducers: {
     setTrips(state, action) {
-      //state = [];
-      console.log(action.payload);
-      /*action.payload.map((item) => {
-        console.log(item)
-        state.push(item)
-      })*/
-
       action.payload.map((item) => {
         state.push(
           <Table.Row key={item.DepartureTime}>
@@ -34,4 +31,4 @@ export const tripsSlice = createSlice({
 
 export const { setTrips, emptyTrips } = tripsSlice.actions
 
-export default tripsSlice.reducer
+export default tripsSlice.reducer*/

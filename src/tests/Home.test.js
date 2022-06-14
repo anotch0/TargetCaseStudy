@@ -1,15 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Home from '../components/home';
 
-import store from './redux/store';
+import store from '../redux/store';
 import { Provider } from 'react-redux';
 
 
-describe('App', () => {
+describe('Home', () => {
   test('renders learn react link', () => {
     render(
       <Provider store={store}>
-        <App />
+        <Home />
       </Provider>);
+
+      screen.debug();
   });
 });

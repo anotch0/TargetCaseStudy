@@ -29,6 +29,12 @@
   color: #61dafb;
 }
 
+.Dropdown-container {
+  display: grid;
+  height: 80px;
+  align-content: space-between;
+}
+
 .Home{
   background-color:#3996db;
 }
@@ -42,6 +48,11 @@
   text-align: center;
   width: 50%;
   margin: auto;
+}
+
+.Table-container {
+  height: 214px;
+  overflow-y: scroll;
 }
 
 h1 {

@@ -1,14 +1,17 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+// used to get specific direction from list
 export const selectedDirectionSlice = createSlice({
   name: 'direction',
   initialState: {
-    value: null
+    value: null,
+    text: null
   },
   reducers: {
     setSelectedDirection(state, action) {
       console.log(action.payload);
-      state.value = action.payload;
+      state.value = action.payload.value;
+      state.text = action.payload.text;
     }
   }
 })

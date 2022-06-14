@@ -1,4 +1,13 @@
-import React, { useState } from "react";
+/*
+  NOTE:
+
+  This is used to find and display stops based off of Stop #
+
+  Accidentally implemented more than was required
+*/
+
+
+/*import React, { useState } from "react";
 
 // components used from semantic ui
 import { Input, Button, Message } from 'semantic-ui-react';
@@ -41,4 +50,4 @@ function StopNumber() {
   )
 }
 
-export default StopNumber;
+export default StopNumber;*/

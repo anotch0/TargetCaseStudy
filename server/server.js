@@ -1,12 +1,19 @@
+/*
+    Proxy server used for api calls. Uses express for backend and axios for api calling
+*/
+
 const express = require('express');
 const axios = require('axios');
 
+// create express backend
 const app = express();
 
+// test call
 app.get('/test', (req, res) => {
   res.json({message: "Hello from server"})
 })
 
+// call to nextrip to get available routes
 app.get('/routes', (req, res) => {
   axios({
       method: 'GET',
@@ -20,6 +27,7 @@ app.get('/routes', (req, res) => {
   })
 })
 
+// passes in a route id to get possible route directions
 app.get('/directions/:route', (req, res) => {
   axios({
       method: 'GET',
@@ -33,6 +41,7 @@ app.get('/directions/:route', (req, res) => {
   })
 })
 
+// passes in route id and direction to get the stops on the route path
 app.get('/stops/:route/:direction', (req, res) => {
   axios({
       method: 'GET',
@@ -46,6 +55,7 @@ app.get('/stops/:route/:direction', (req, res) => {
   })
 })
 
+// passes in a route id, direction and stop to get train times
 app.get('/nextrip/:route/:direction/:stop', (req, res) => {
   axios({
       method: 'GET',
@@ -60,6 +70,7 @@ app.get('/nextrip/:route/:direction/:stop', (req, res) => {
   })
 })
 
+// passes in specific stop id to get train times
 app.get('/NexTrip/:stopid', (req, res) => {
   axios({
       method: 'GET',
@@ -73,7 +84,7 @@ app.get('/NexTrip/:stopid', (req, res) => {
   })
 })
 
-
+// local host port used for backend
 const PORT = 4000;
 
 app.listen(PORT, () => {

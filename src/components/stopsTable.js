@@ -1,38 +1,32 @@
 import React from "react";
-import { Table } from 'semantic-ui-react';
 
-import { useSelector, useDispatch } from 'react-redux'
+// import components from semantic ui
+import { Table, Header } from 'semantic-ui-react';
+
+// import component for redux
+import { useSelector } from 'react-redux'
 
 function StopsTable() {
-  const trips = useSelector(state => state.trips);
-  const dispatch = useDispatch();
+  //const trips = useSelector(state => state.trips);
+  const stops = useSelector(state => state.stops);
+  const route = useSelector(state => state.route);
+  const direction = useSelector(state => state.direction);
 
-  /*const listTrips = trips.map((trips) => {
-    console.log(trips);
-    return (
-      <Table.Row>
-        <Table.Cell>{trips.Route}</Table.Cell>
-        <Table.Cell>{trips.Desctiption}</Table.Cell>
-        <Table.Cell>{trips.DepartureText}</Table.Cell>
-      </Table.Row>
-    )
-  });*/
-
-  function listTrips() {
-    const listTrips = trips.map((trips) => {
+  // function takes the list of stops and turns into a list of cells to populate table
+  function listStops() {
+    const listStops = stops.map((stops) => {
       return (
-        <Table.Row>
-          <Table.Cell>{trips.Route}</Table.Cell>
-          <Table.Cell>{trips.Desctiption}</Table.Cell>
-          <Table.Cell>{trips.DepartureText}</Table.Cell>
+        <Table.Row key={stops.key}>
+          <Table.Cell>{stops.text}</Table.Cell>
         </Table.Row>
       )
     });
 
-    return listTrips;
+    return listStops;
   }
 
-  return (
+  // old table for train route implementation, exceeded functionality
+  /*return (
     <div>
       <Table celled>
         <Table.Header>
@@ -48,6 +42,20 @@ function StopsTable() {
         </Table.Body>
       </Table>
     </div>
+  )*/
+
+  // creates table and populated with stops
+  return (
+    <>
+      <Header size='large' block>Stops for {route.text} headed {direction.text}</Header>
+      <div className="Table-container">
+        <Table celled columns={1}>
+          <Table.Body>
+            {listStops()}
+          </Table.Body>
+        </Table>
+      </div>
+    </>
   )
 }
 

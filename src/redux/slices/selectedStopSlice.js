@@ -1,4 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+/*
+  Used for implementation of train times, not in current app
+*/
+
+/*import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const selectedStopSlice = createSlice({
   name: 'stop',
@@ -16,4 +20,4 @@ export const selectedStopSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { setSelectedStop } = selectedStopSlice.actions
 
-export default selectedStopSlice.reducer
+export default selectedStopSlice.reducer*/
