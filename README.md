@@ -26,6 +26,16 @@ Very minimal testing with the react testing library was used. Majority of testin
 - A components library for the front-end
 - Routes API is called at the start as Route data is needed for other API calls
 
+## Further Notes
+
+### Completedness
+
+The app is functional in development mode. The proxy server does not work outside of development. The app is functional based on required functionality, but I do not believe it is yet production ready. While the app works reasonably well with the forward and back buttons, the routing is not fully fleshed out. This cause problems with refreshing the page when viewing the table as well as the routes dropdown menu fetch calling when page refreshes. Testing is also lacking.
+
+### Side Note
+
+Due to a misread on my part, the app was originally built out to match all the functionalities from NexTrip, including table result fully getting NexTrip Train Departures, both through the dropdown menus and search by Stop ID. This took away development time from other areas.
+
 ## Created With React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
